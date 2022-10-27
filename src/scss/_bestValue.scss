@@ -1,0 +1,17 @@
+.bestValue{
+    padding: 64px 0 10% 0;
+    background: radial-gradient(100% 100% at 50% 0%, #686C6F 0%, #373A3C 100%);
+    &-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    &-cards{
+       
+        margin: 42px 0 0 0;
+    }
+}

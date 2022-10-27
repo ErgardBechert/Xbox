@@ -3,6 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    box-shadow: 0px 5px 0px #777777;
     padding: 15px 30px;
     z-index: 50;
     &::before{
@@ -12,25 +13,26 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #435766;
+        background-color: #373A3C;
         z-index: 2;
     }
-    
+    select{
+        color: rgba($color: #fff, $alpha: 0.5);
+    }
     &-body{
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;     
         &__logo{
-            width: 40%;
+            width: 30%;
             position: relative;
             margin: 0 30px 0 0;  
             z-index: 3;
         }
-       
         &__menu{
             display: flex;
-            justify-content: space-between;
+            gap: 37px;
             z-index: 2;
             &-user{
                 display: flex;
@@ -41,10 +43,13 @@
                 gap: 25px;
                 justify-content: center;
                 align-items: center;
-                
+                color: rgba($color: #fff, $alpha: 0.5);
             }
             li{
                 cursor: pointer;
+                select{
+                    color: rgba($color: #fff, $alpha: 0.5);
+                }
             }
             a{
                 color: #fff;
@@ -67,6 +72,11 @@
 
 
 @media (max-width: 854px){
+    .header{
+        select{
+            color: #8DD83D;
+        }
+    }
     body.lock{
         overflow: hidden;
     }
@@ -76,13 +86,22 @@
             position: fixed;
             top: -100%;
             left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
             height: 100%;
             padding: 80px 0 0 0;
-            background-color: #000;
+            background-color: #17191A;
+            color: #8DD83D;
             transition: all 0.5s ease 0s;
             ul{
                 flex-direction: column;
+                li{
+                    select{
+                        color: #8DD83D;
+                    }
+                }
             }
             &.active{
                 top: 0;
@@ -131,6 +150,4 @@
             transform: scale(0);
         }
     }
-    
-    
 }

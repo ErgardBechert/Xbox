@@ -1,0 +1,16 @@
+.exclusiveGames{
+    height: 880px;
+    background: url('../img/exclusiveGames/bcg.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &__title{
+        display: flex;
+        justify-content: center;
+        padding: 97px 0 0 0;
+    }
+    &-slider{
+        display: flex;
+        gap: 16px;
+    }
+    
+}

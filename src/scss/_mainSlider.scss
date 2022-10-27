@@ -1,0 +1,167 @@
+.mainSlider{
+    margin: 60px 0 0 0;
+    &-bgc{
+        position: relative;
+        background: url('../img/mainSlider/Star-Wars-Battlefront-II-combat.jpg') no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+    &-button{
+
+        button{
+            border-radius: 4px;
+            border: none;
+            padding: 8px 19px;
+            color: #fff;
+        }
+     
+    
+    }
+    &-body{
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        &__info{
+            &-title{
+                font-size: 36px;
+                line-height: 42px;
+            }
+            &-subtitle{
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        &__menu{
+            width: 35%;
+        }
+        &__form{
+            display: flex;
+            gap: 13px;
+            margin: 135px 0 0 0;
+            &-watch{
+                button{
+                    background-color: #8DD83D;
+                }
+            }
+            &-explore{
+                button{
+                    background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+                }
+            }
+        }
+    }
+}
+
+/*Адптив*/
+@media only screen and (max-width: 768px) {   
+    .mainSlider{    
+        &-bgc{
+            background-image: url('../img/mainSlider/Star-Wars-Battlefront-II-combat.jpg'); 
+        }
+    } 
+}
+@media (max-width: 854px){
+    .mainSlider{
+        &-body{
+            align-items: center;
+            &__menu{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            &__form{
+                margin: 50px 0 0 0;
+            }
+        }
+    }
+}
+@media (max-width: 440px){
+    .mainSlider{
+        &-body{
+            &__menu{
+            }
+            &__form{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+/* Слайдер */
+.slick-slider{
+	min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+/* Конкретный слайдер */
+.slider {
+	position: relative;
+	
+}
+.slider .slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 60px;
+}
+.slider .slick-arrow.slick-prev{
+	left: 5%;
+	background: url('../img/mainSlider/icon-prev.svg') 0 0 / 100% no-repeat;
+    border: none;
+}
+.slider .slick-arrow.slick-next{
+	right: 5%;
+	background: url('../img/mainSlider/icon-next.svg') 0 0 / 100% no-repeat;
+    border: none;
+}
+.slider .slick-arrow.slick-disabled{
+	opacity: 0.2;
+}
+
+.slider .slick-dots{
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+    left: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider .slick-dots li{
+	list-style: none;
+	margin: 0px 10px;
+}
+.slider .slick-dots button{
+	font-size: 0;
+	width: 10px;
+	height: 15px;
+	background-color: #8DD83D;
+	border-radius: 50%;
+    border: 1px solid #8DD83D;
+}
+
+.slider .slick-dots li.slick-active button{
+	background-color: transparent;
+    border: 1px solid #8DD83D;
+}
+
+.slider__item {
+    
+	padding: 0px 15px;
+}
