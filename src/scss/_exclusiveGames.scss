@@ -1,16 +1,129 @@
 .exclusiveGames{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
     height: 880px;
     background: url('../img/exclusiveGames/bcg.jpg') no-repeat;
     background-position: center center;
     background-size: cover;
-    &__title{
-        display: flex;
-        justify-content: center;
-        padding: 97px 0 0 0;
+    overflow: hidden;
+    &-h{
+        width: 60%;
+
     }
-    &-slider{
+    &-body{
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    &-header{
         display: flex;
-        gap: 16px;
+        justify-content: space-between;
+      
+        padding: 97px 30px 0 0;
+    }
+    &-item{
+    
+        width: 25%;
+        margin: 0 0.7%;
+      
+        img{
+            width: 100%;
+            height: 100%;
+        }
     }
     
+    &-slider{
+        overflow: hidden;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        
+    }
+    &-store{
+        position: absolute;
+        left: 45%;
+        right: 45%;
+        bottom: 5%;
+        button{
+            padding: 18px 47px !important;
+            cursor: pointer;
+        }
+    }
+    
+}
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+
+.exclusiveGames-slick-next{
+	background: url('../img/mainSlider/icon-next.svg') 0 0 / 100% no-repeat;
+    border: none;
+}
+.slick-current{
+   
+    .cards__item-body-button{
+        button{
+           
+            background: linear-gradient(45deg, rgb(141, 216, 61) 49%, rgb(78, 120, 33) 33%);
+        }
+    }
+    
+}
+@media (max-width: 870px){
+    
+    .exclusiveGames{
+        align-items: center;
+        &-slick-next{
+            margin: 0 0 0 20px;
+        }
+        &-slider{
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            
+        }
+        &-item{
+            margin: 0 0.5%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 610px){
+    
+    .exclusiveGames{
+        align-items: center;
+        &-slick-next{
+            margin: 0 0 0 20px;
+        }
+        &-slider{
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            
+        }
+        &-item{
+            margin: 0 0.5%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }

@@ -15,13 +15,4 @@ $(document).ready(function(){
 		slidesToShow:1,
 	});
 });
-/*Slider Exclusive games */
-$(document).ready(function(){
-	$('.exclusiveGames-slider').slick({
-		arrows:true,
-		dots:false,
-		slidesToShow:4,
-		prevArrow: false
-		
-	});
-});
+
