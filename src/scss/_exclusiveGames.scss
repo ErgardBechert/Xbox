@@ -28,7 +28,7 @@
     &-item{
     
         width: 25%;
-        margin: 0 0.7%;
+        margin: 0 1.3%;
       
         img{
             width: 100%;
@@ -46,8 +46,9 @@
     }
     &-store{
         position: absolute;
-        left: 45%;
-        right: 45%;
+      
+        left:50%;
+        transform:translate(-50%, -50%);
         bottom: 5%;
         button{
             padding: 18px 47px !important;
@@ -66,7 +67,6 @@
     border: none;
 }
 .slick-current{
-   
     .cards__item-body-button{
         button{
            
@@ -92,19 +92,16 @@
             left: 5%;
             
         }
-        &-item{
-            margin: 0 0.5%;
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
     }
 }
 @media (max-width: 610px){
     
     .exclusiveGames{
         align-items: center;
+        &-h{
+            width: 100%;
+            padding: 0 20px;
+        }
         &-slick-next{
             margin: 0 0 0 20px;
         }
@@ -115,15 +112,25 @@
             max-width: 100%;
             position: absolute;
             top: 0;
-            left: 5%;
+            left: 0;
             
         }
+        
         &-item{
-            margin: 0 0.5%;
-            img{
-                width: 100%;
-                height: 100%;
+          width: 360px !important;
+          margin: 0 0.5%;
+        }
+    }
+}
+
+@media (max-width: 368px){
+    .exclusiveGames{
+        &-store{
+            button{
+                padding: 18px 15px !important;
+                cursor: pointer;
             }
         }
     }
+   
 }
